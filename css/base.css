@@ -337,6 +337,15 @@ body {
   opacity: 1;
 }
 
+.arrow-left {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: .7em solid transparent;
+  border-bottom: .7em solid transparent;
+  border-right: .7em solid white;
+}
+
 #outer-wrap {
   position: relative;
   overflow: hidden;
@@ -476,34 +485,39 @@ footer[role="contentinfo"] {
   }
 }
 @media screen and (max-width: 45em) {
-	.inner-wrap-open {
+	.transition {
 		-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
 		-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
 		-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
 		-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
 		transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	}
+
+	.inner-wrap-open {
 		-webkit-transform: translate(12em, 0);
 		transform: translate(12em, 0);
 		will-change: transform;
 	}
 
 	.inner-wrap-close {
-		-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
 		-webkit-transform: translate(0, 0);
 		transform: translate(0, 0);
 		will-change: transform;
 	}
 	
+	.arrow-open {
+		-webkit-transform: translate(-.65em, .5em);
+		transform: translate(-.65em, .5em);
+		will-change: transform;
+	}
+
+	.arrow-close {
+		-webkit-transform: translate(0, .5em);
+		transform: translate(0, .5em);
+		will-change: transform;
+	}
+	
 	.nav-block-open {
-		-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
 		-webkit-transform: translate(0, 0) scale(1);
 		transform: translate(0, 0) scale(1);
 		transform-origin: top left;
@@ -512,11 +526,6 @@ footer[role="contentinfo"] {
 	}
 
 	.nav-block-close {
-		-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-		transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
 		-webkit-transform: translate(-2em, 0) scale(.9);
 		transform: translate(-2em, 0) scale(.9);
 		transform-origin: top left;
