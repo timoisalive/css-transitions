@@ -344,12 +344,6 @@ body {
 }
 
 #inner-wrap {
-	-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	will-change: transform;
 	box-shadow: 0 0 4em 0 rgba(0,0,0,.9);
   position: relative;
   width: 100%;
@@ -372,13 +366,6 @@ body {
   width: 1px;
 }
 #nav .block {
-	-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-	transform-origin: top left;
-	will-change: transform;
   position: relative;
   padding: 0.75em 1.25em;
   background: #333333 url('../img/pattern-darkblue.jpg') repeat;
@@ -489,20 +476,59 @@ footer[role="contentinfo"] {
   }
 }
 @media screen and (max-width: 45em) {
-	#inner-wrap:not(:target) {
+	.inner-wrap-open {
+		-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
 		-webkit-transform: translate(12em, 0);
 		transform: translate(12em, 0);
+		will-change: transform;
 	}
+
+	.inner-wrap-close {
+		-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+		will-change: transform;
+	}
+	
+	.nav-block-open {
+		-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-webkit-transform: translate(0, 0) scale(1);
+		transform: translate(0, 0) scale(1);
+		transform-origin: top left;
+		opacity: 1;
+		will-change: transform, opacity;
+	}
+
+	.nav-block-close {
+		-webkit-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-moz-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-ms-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-o-transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-webkit-transform: translate(-2em, 0) scale(.9);
+		transform: translate(-2em, 0) scale(.9);
+		transform-origin: top left;
+		opacity: 0;
+		will-change: transform, opacity;
+	}
+	
   #nav {
     position: absolute;
     top: 0;
     padding-top: 5.25em;
   }
-	#nav:not(:target) .block {
-		opacity: 0;
-		-webkit-transform: translate(-2em, 0) scale(.9);
-		transform: translate(-2em, 0) scale(.9);
-	}
   #nav .close-btn {
     position: absolute;
     top: -3.75em;
