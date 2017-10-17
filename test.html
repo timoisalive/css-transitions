@@ -1,0 +1,39 @@
+<head>
+	<style type="text/css">
+		/* [id^=tab] {
+			position: absolute;
+		} */
+		/* [id^=tab]:not(:target) {
+			color: white;
+		} */
+		/* [id^=tab]:target {
+			color: green;
+		} */
+		#tab1:target {
+			color: red;
+		}
+		#tab1:target #tab2 {
+			color: blue;
+		}
+	</style>
+</head>
+
+<div class="tabbed-widget">
+<div class="tab-wrap">
+	<a href="#tab1">Tab 1</a>
+	<a href="#tab2">Tab 2</a>
+	<a href="#tab3">Tab 3</a>
+</div>
+
+<ul class="tab-body">
+	<li id="tab1">
+		<p>This is tab 1</p>
+	</li>
+	<li id="tab2">
+		<p>This is tab 2</p>
+	</li>
+	<li id="tab3">
+		<p>This is tab 3</p>
+	</li>
+</ul>
+</div>
