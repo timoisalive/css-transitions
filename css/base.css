@@ -482,17 +482,19 @@ footer[role="contentinfo"] {
 }
 @media screen and (max-width: 45em) {
 	#inner-wrap:not(:target) {
+		-webkit-transform: translate(12em, 0);
 		transform: translate(12em, 0);
 	}
   #nav {
     position: absolute;
     top: 0;
     padding-top: 5.25em;
+  }
+	#nav:not(:target) .block {
+		opacity: 0;
+		-webkit-transform: translate(-2em, 0) scale(.9);
+		transform: translate(-2em, 0) scale(.9);
 	}
-#nav:not(:target) .block {
-	opacity: 0;
-	transform: translate(-2em, 0) scale(.9);
-}
   #nav .close-btn {
     position: absolute;
     top: -3.75em;
